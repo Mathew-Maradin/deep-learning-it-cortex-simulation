@@ -14,15 +14,15 @@ This project investigates how convolutional neural networks (CNNs) can replicate
 
 Activation maps visualize how internal filters respond to specific features, acting as a proxy for neural firing patterns.
 
-* **CNN1:** Displayed uninformative, diffuse activation with no clear spatial structure.
+**CNN1:** Displayed uninformative, diffuse activation with no clear spatial structure.
 
 ![Activation Map 1](assets/AM1.png)
 
-* **CNN2:** Showed focused responses along facial outlines, indicating effective edge detection similar to early visual processing areas like CNN1.
+**CNN2:** Showed focused responses along facial outlines, indicating effective edge detection similar to early visual processing areas like CNN1.
 
 ![Activation Map 2](assets/AM2.png)
 
-* **CNN3:** Produced well-structured maps that highlighted specific features with high precision, demonstrating a superior capacity for complex feature extraction.
+**CNN3:** Produced well-structured maps that highlighted specific features with high precision, demonstrating a superior capacity for complex feature extraction.
 
 ![Activation Map 3](assets/AM3.png)
 
@@ -36,22 +36,22 @@ was then evenly sampled to consist of **523 human images** and **536 non-face im
 
 To analyze feature sensitivity, facial images were subjected to several distortions:
 
-* **Horizontal Occlusion:** A 16-pixel-wide white stripe moved vertically across the face in 10-pixel steps for 13 total positions.
+**Horizontal Occlusion:** A 16-pixel-wide white stripe moved vertically across the face in 10-pixel steps for 13 total positions.
 
 ![Stripes 1](assets/stripes1.png)
 
-* **Vertical Occlusion:** A similar 16-pixel-wide white stripe moved horizontally across the face.
+**Vertical Occlusion:** A similar 16-pixel-wide white stripe moved horizontally across the face.
 
 ![Stripes 2](assets/stripes2.png)
 
-* **Gaussian Blur:** Five levels of increasing blur were applied to determine the models' reliance on fine-grained versus general shapes.
+**Gaussian Blur:** Five levels of increasing blur were applied to determine the models' reliance on fine-grained versus general shapes.
 
 ![Blur levels](assets/blur.png)
 
 ## Results
 
 Performance was evaluated using classification accuracy and **5-fold cross-validation** to ensure statistical reliability. CNN1 failed to distinguish faces from non-faces, with accuracy hovering around **50%** throughout training while CNN2 achieved the highest 
-testing accuracy, reaching the **high 80s**, and proved most robust to blurring.Both CNN2 and CNN3 showed a substantial drop in accuracy when the **eye region** (modifications 2–4) was occluded, aligning with sensitivities observed in biological IT neurons.
+testing accuracy, reaching the **high 80s**, and proved most robust to blurring. Both CNN2 and CNN3 showed a substantial drop in accuracy when the **eye region** (modifications 2–4) was occluded, aligning with sensitivities observed in biological IT neurons.
 
 ![Results summary](assets/results.png)
 
